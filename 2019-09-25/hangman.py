@@ -30,6 +30,7 @@ while life > 0:
         print("Wrong char length!")
     x, guessed = replaceToChar(chosen, guessed, guess)
     if guessed == chosen:
+        print(guessed)
         print("You win!")
         exit()
     if not x:
