@@ -39,7 +39,7 @@ class Chess(object): # using class so it is easier to read & execute
             except IndexError:
                 pass # skipping the move assignment if index is out of range
 
-chess = Chess(input("How big is the chess boards (ex. 8x8 upto 26x26): "))
+chess = Chess(input("How big is the chessboard (ex. 8x8 upto 26x26): "))
 chess.parseChessMove(input("Put your VALID chess moves: "))
 chess.addPossibleMoves()
 chess.printChessboard()
