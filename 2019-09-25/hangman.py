@@ -3,6 +3,7 @@
 from random import choice
 from re import sub
 
+
 def replaceToChar(sentence, guessed, char):
     indexes = []
     for x in range(len(sentence)):
@@ -11,15 +12,16 @@ def replaceToChar(sentence, guessed, char):
     if not indexes:
         return False, guessed
     for i in indexes:
-        guessed = list(guessed) # changing to list so it becomes muteable
+        guessed = list(guessed)  # changing to list so it becomes muteable
         guessed[i] = sentence[i]
     return True, "".join(guessed)
-    
 
-SENTENCES = ["BINUS University International", "Python Lesson", "I will just put anything here", "Ayy Lmao"] # sentence pool
+
+SENTENCES = ["BINUS University International", "Python Lesson",
+             "I will just put anything here", "Ayy Lmao"]  # sentence pool
 life = 5
-chosen = choice(SENTENCES) # selecting random sentence from the pool
-guessed = sub("[a-zA-Z]", "_", chosen) # changing every character to _
+chosen = choice(SENTENCES)  # selecting random sentence from the pool
+guessed = sub("[a-zA-Z]", "_", chosen)  # changing every character to _
 
 print("Welcome to hangman!")
 while life > 0:
