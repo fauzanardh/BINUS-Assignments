@@ -1,0 +1,19 @@
+1 | The Project Gutenberg EBook of Pride and Prejudice, by Jane Austen
+2 | 
+3 | This eBook is for the use of anyone anywhere at no cost and with
+4 | almost no restrictions whatsoever.  You may copy it, give it away or
+5 | re-use it under the terms of the Project Gutenberg License included
+6 | with this eBook or online at www.gutenberg.org
+7 | 
+8 | 
+9 | Title: Pride and Prejudice
+10 | 
+11 | Author: Jane Austen
+12 | 
+13 | Posting Date: August 26, 2008 [EBook #1342]
+14 | Release Date: June, 1998
+15 | Last Updated: March 10, 2018
+16 | 
+17 | Language: English
+18 | 
+19 | Character set encoding: UTF-8
