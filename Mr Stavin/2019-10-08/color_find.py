@@ -1,7 +1,9 @@
 import json
 
-with open("colors.json", "r") as fp:
-    colors = json.loads(fp.read())
+
+def loadFile(inputFile):
+    with open(inputFile, "r") as fp:
+        return json.loads(fp.read())
 
 
 def saveFile(outfile, jsonData):
@@ -57,6 +59,7 @@ def addColor():
         print("Invalid color data!")
 
 
+colors = loadFile("colors.json")
 availableChoice = ['1', '2', '3', '4']
 while True:
     print("1. Find by Color\n2. Find by RGB\n3. Find by HexString\n4. Add color")
