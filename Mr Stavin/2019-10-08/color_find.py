@@ -63,9 +63,10 @@ while True:
     choice = input("> ")
     colorFoundIndex = -1
     isSave = False
+
     if choice not in availableChoice:
         continue
-    if choice == '1':
+    elif choice == '1':
         colorFoundIndex = colorToIndex(input("Color (ex. white): "))
     elif choice == '2':
         colorFoundIndex = rgbToIndex(
@@ -77,6 +78,7 @@ while True:
         addColor()
     else:
         continue
+
     if isSave:
         pass
     elif colorFoundIndex == -1:
