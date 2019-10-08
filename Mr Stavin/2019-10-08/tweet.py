@@ -20,11 +20,10 @@ def addTweet(username, tweet):
 
 
 tweets = loadFile("tweet2.json")
-availableChoice = ['1', '2', '3', '4']
+availableChoice = ['1', '2']
 while True:
     print("1. Print tweet\n2. Add tweet")
     choice = input("> ")
-    isSave = False
 
     if choice not in availableChoice:
         continue
