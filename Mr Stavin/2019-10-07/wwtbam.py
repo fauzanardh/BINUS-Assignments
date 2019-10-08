@@ -29,30 +29,30 @@ questions = {
         "answers": ['JD', 'JR', 'JG', 'JC'],
         "rightAnswer": 3
     },
-    5: {
+    4: {
         "questions": "Which month of the year was named after Julius Caesar?",
         "answers": ['October', 'June', 'July', 'August'],
-        "rightAnswer": 0
+        "rightAnswer": 2
     },
-    6: {
+    5: {
         "questions": "In which Broadway musical did actress Glenn Close star in 1995?",
         "answers": ['Phantom Of The Opera', 'Oklahoma!', 'Miss Saigon', 'Sunset Boulevard'],
-        "rightAnswer": 0
+        "rightAnswer": 1
     },
-    7: {
+    6: {
         "questions": "Which of these celebrities was not a member of the 'Rat Pack'?",
         "answers": ['Joey Bishop', 'Frank Sinatra', 'Sammy Davis Jr.', 'Rock Hudson'],
         "rightAnswer": 0
     },
-    8: {
+    7: {
         "questions": "In what city does the singer meet 'Mr. Bojangles'?",
         "answers": ['New Orleans', 'Tallahassee', 'New York', 'Charlotte'],
         "rightAnswer": 0
     },
-    9: {
+    8: {
         "questions": "How many X's are there on a regular clock face with Roman numerals?",
         "answers": ['2', '4', '5', '3'],
-        "rightAnswer": 0
+        "rightAnswer": 1
     }
 }
 
@@ -64,9 +64,7 @@ def printPayout(indexCurrent):
 
 def printAnswer(questionIndex, questionList):
     for i in questionList:
-        print(f'{chr(65+i)}. {questions[chosen[questionIndex]]["answers"][i]}',
-              end='\t\t\t\t' if i % 2 == 0 else '\n')
-    print()
+        print(f'{chr(65+i)}. {questions[chosen[questionIndex]]["answers"][i]}')
 
 
 def get5050(question):
@@ -79,7 +77,12 @@ def get5050(question):
 
 
 def askAudience(question):
-    pass
+    y = []
+    for x in range(len(question["answers"])):
+        y += list(str(x)*random.randint(1, 100 if x ==
+                                        question["rightAnswer"] else 35))
+    for x in range(len(question["answers"])):
+        question["answers"][x] += f"  {(y.count(str(x))/len(y))*100:.2f}%"
 
 
 chosen = [x for x in range(len(questions))]
@@ -103,7 +106,7 @@ while currentQuestion < len(chosen):
         elif userHintInput == "A":
             answers = get5050(questions[chosen[currentQuestion]])
         elif userHintInput == "B":
-            pass
+            askAudience(questions[chosen[currentQuestion]])
         else:
             pass
     printAnswer(currentQuestion, answers)

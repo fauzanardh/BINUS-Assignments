@@ -39,7 +39,7 @@ for temps in range(len(tempsDaysAvg)//daysInMonth):
 # Smoothing the data
 months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 monthNP = np.array(months)
-xnew = np.linspace(monthNP.min(), monthNP.max(), 300)
+xnew = np.linspace(monthNP.min(), monthNP.max(), 1000)
 avgNP = np.array(tempsMonthAvg)
 splAvg = make_interp_spline(monthNP, avgNP, k=3)
 highNP = np.array(tempsMonthHigh)
