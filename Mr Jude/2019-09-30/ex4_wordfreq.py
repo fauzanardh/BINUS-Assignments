@@ -3,7 +3,7 @@ import re
 
 def wordFreq(words):
     word_count = {}
-    for y in re.findall("[a-zA-Z]+", words):
+    for y in re.findall(r"\w+", words):
         word_count[y] = word_count.get(y, 0) + 1
     return word_count
 

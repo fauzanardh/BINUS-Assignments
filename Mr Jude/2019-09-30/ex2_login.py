@@ -4,10 +4,7 @@ users = {
 
 
 def acceptLogin(users, username, password):
-    if username in users:
-        if users[username] == password:
-            return True
-    return False
+    return users.get(username, -1) == password
 
 
 username = input("Enter your username: ")

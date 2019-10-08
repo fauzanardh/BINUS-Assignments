@@ -1,8 +1,8 @@
-def findVal(mydict, val):
+def findVal(mydict, value):
     dictFound = []
-    for x, y in mydict.items():
-        if y == val:
-            dictFound.append(x)
+    for key, val in mydict.items():
+        if val == value:
+            dictFound.append(key)
     return dictFound
 
 
