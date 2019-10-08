@@ -29,27 +29,32 @@ def colorToIndex(colorInput):
 
 
 def rgbToIndex(rgbString):
-    rgbVal = rgbString.replace(" ", "").split(",")
-    rgbVal = [int(rgb) for rgb in rgbVal]
-    for index, color in enumerate(colors["colors"]):
-        if color["code"]["rgb"] == rgbVal:
-            return index
+    try:
+        rgbVal = [int(rgb) for rgb in rgbString.replace(" ", "").split(",")]
+        for index, color in enumerate(colors["colors"]):
+            if color["code"]["rgb"] == rgbVal:
+                return index
+    except ValueError:
+        pass
     return -1
 
 
 def addColor():
-    color = input("Color (ex. white): ").lower()
-    rgbVal = input("RGB String (ex. 255,255,255): ").replace(
-        " ", "").split(",")
-    hexString = input("HexString (ex. FFFFFF): ").upper()
-    colors["colors"].append({
-        "color": color,
-        "code": {
-            "rgb": rgbVal,
-            "hex": hexString
-        }
-    })
-    saveFile("colors.json", colors)
+    try:
+        color = input("Color (ex. white): ").lower()
+        rgbVal = [int(rgb) for rgb in input(
+            "RGB String (ex. 255,255,255): ").replace(" ", "").split(",")]
+        hexString = input("HexString (ex. FFFFFF): ").upper()
+        colors["colors"].append({
+            "color": color,
+            "code": {
+                "rgb": rgbVal,
+                "hex": hexString
+            }
+        })
+        saveFile("colors.json", colors)
+    except ValueError:
+        print("Invalid color data!")
 
 
 availableChoice = ['1', '2', '3', '4']
