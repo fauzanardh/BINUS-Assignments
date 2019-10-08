@@ -88,7 +88,7 @@ def askAudience(question):
 chosen = [x for x in range(len(questions))]
 random.shuffle(chosen)
 chosen = chosen[:5]
-currentPayout = 5
+currentPayout = 4
 currentQuestion = 0
 
 while currentQuestion < len(chosen):
