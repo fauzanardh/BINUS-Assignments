@@ -14,7 +14,7 @@ def countWords(userInput):
     counts = {}
     for word in re.findall("[a-z]+", userInput.lower()):
         counts[word] = counts.get(word, 0) + 1
-    return dict(sorted(counts.items(), key=lambda x: x[1])[::-1])
+    return dict(sorted(counts.items(), reverse=True, key=lambda x: x[1]))
 
 
 def getTextFromFile(filename):
