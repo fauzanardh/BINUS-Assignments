@@ -3,7 +3,7 @@ import pygal
 
 
 def makeBar(dataDict):
-    chart = pygal.Bar()
+    chart = pygal.HorizontalBar()
     chart.title = "Words count in certain literature"
     for key, value in dataDict.items():
         chart.add(key, value)
