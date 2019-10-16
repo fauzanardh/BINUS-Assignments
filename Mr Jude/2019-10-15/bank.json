@@ -1,0 +1,22 @@
+{
+    "bankName": "Yeetmaster 69 Bank",
+    "adminPass": "45b1c901aa5d4747f1d123a73f9b4482",
+    "customers": {
+        "admin": {
+            "account": {
+                "balance": 69696969
+            },
+            "firstName": "super",
+            "lastName": "admin",
+            "passwordHash": "21232f297a57a5a743894a0e4a801fc3"
+        },
+        "alee": {
+            "account": {
+                "balance": 50000
+            },
+            "firstName": "Arvin",
+            "lastName": "alee",
+            "passwordHash": "ed687c140c553dc9d8046a043deebd52"
+        }
+    }
+}
