@@ -1,0 +1,2 @@
+S0001#Calvin Something#MANAGER#1000000000
+S0002#Ellis Something#OFFICER#7420696
